@@ -12,7 +12,7 @@
 library(stringr)
 
 # Read in data, and parse for the text and pattern
-data_file <- "data/week1_1.2.txt"
+data_file <- "data/PatternCount.txt"
 data <- read.delim(data_file, header=FALSE, sep="\n")
 data <- unlist(data)
 data_text <- data[1]

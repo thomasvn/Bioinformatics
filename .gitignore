@@ -1,3 +1,6 @@
 # R Environment
 *.Rproj
 *.Rproj.user
+.Rproj.user
+.RData
+.Rhistory
