@@ -32,7 +32,6 @@ for (i in start:end) {
 start <- 1
 end <- nchar(text) - k
 result <- c()
-len <- 1
 for (i in start:end) {
   pattern <- substr(text, i, i + k - 1)
   pattern_regex <- str_c("(?=", pattern, ")")
@@ -40,8 +39,7 @@ for (i in start:end) {
   count <- str_count(text, pattern=pattern_regex)
   if (count == highest) {
     if (!(pattern %in% result)) {
-      result[len] <- pattern
-      len <- len + 1
+      result <- c(result, pattern)
     }
   }
 }
